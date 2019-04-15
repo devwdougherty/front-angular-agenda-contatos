@@ -1,0 +1,42 @@
+<div class="ui-g">
+	<div class="ui-g-12">
+		<!-- PrimeNG Table component -->
+		<p-table [value]="contatos">
+			<ng-template pTemplate="caption">Contatos cadastrados na agenda!
+			</ng-template>
+			<ng-template pTemplate="header">
+				<tr>
+					<th class="ui-g-2 ui-fluid">Id</th>
+					<th class="ui-g-5 ui-fluid">Nome</th>
+					<th class="ui-g-3 ui-fluid">Telefone</th>
+					<th class="ui-g-1 ui-fluid">Editar</th>
+					<th class="ui-g-1 ui-fluid">Excluir</th>
+				</tr>
+			</ng-template>
+			<ng-template pTemplate="body" let-contato>
+				<tr>
+					<td class="ui-g-2">
+						<!--<span class="ui-column-title"></span>-->
+						{{ contato.id }}
+					</td>
+					<td class="ui-g-5">
+						<!--<span class="ui-column-title"></span>-->
+						{{ contato.nome }}
+					</td>
+					<td class="ui-g-3">
+						<!--<span class="ui-column-title"></span>-->
+						{{ contato.telefone }}
+					</td>
+					<td class="ui-g-1 ui-fluid">
+						<button pButton type="button" [routerLink]="['/contatos-edit', contato.id]"
+								icon="pi pi-pencil" style="background-color: #494373"></button>
+					</td>
+					<td class="ui-g-1 ui-fluid">
+						<button pButton type="button" [routerLink]="['/contatos-delete', contato.id]"
+								icon="pi pi-times" style="background-color: #494373"></button>
+					</td>
+				</tr>	
+			</ng-template>
+		</p-table>
+	</div>
+</div>

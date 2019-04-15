@@ -1,0 +1,34 @@
+<div class="ui-g">
+	<div class="ui-g-12">
+		<h1>Edição de Contato</h1>
+	</div>
+</div>
+
+<form autocomplete="on" #frmEdit="ngForm" (ngSubmit)="putContato(frmEdit)">
+	<div class="ui-g">
+		<div class="ui-g-7 ui-fluid">
+			<label>Nome do Contato</label>
+			<input pInputText [value]="contato.nome" id="NomeEdit" name ="NomeEdit"
+			placeholder="Digite seu nome :)" 
+			[(ngModel)]="contato.Nome" required
+			#NomeEdit/>
+		</div>
+
+		<div class="ui-g-3 ui-fluid">
+			<label>Telefone do Contato</label>
+			<input pInputText [value]="contato.telefone" id="TelefoneEdit" name ="TelefoneEdit"
+			placeholder="Digite seu telefone com DDD :)" 
+			[(ngModel)]="contato.Telefone" required
+			#TelefoneEdit/>
+		</div>
+
+		<div class="ui-g-2 ui-fluid">
+			<br/>
+			<button pButton icon="pi pi-check"
+					label="Salvar"
+					[disabled]="!NomeEdit.value || !TelefoneEdit.value"
+					style="background-color: #494373">
+			</button>
+		</div>
+	</div>
+</form>

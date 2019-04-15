@@ -1,0 +1,34 @@
+<div class="ui-g">
+	<div class="ui-g-12">
+		<h1>Cadastro de Contatos</h1>
+	</div>
+</div>
+
+<form autocomplete="off" #frm="ngForm" (ngSubmit)="addContato(frm)">
+	<div class="ui-g">
+		<div class="ui-g-7 ui-fluid">
+			<label>Nome do Contato</label>
+			<input pInputText id="Nome" name ="Nome"
+			placeholder="Digite seu nome :)" 
+			[(ngModel)]="contato.Nome" required
+			#Nome/>
+		</div>
+
+		<div class="ui-g-3 ui-fluid">
+			<label>Telefone do Contato</label>
+			<input pInputText id="Telefone" name ="Telefone"
+			placeholder="Digite seu telefone com DDD :)" 
+			[(ngModel)]="contato.Telefone" required
+			#Telefone/>
+		</div>
+
+		<div class="ui-g-2 ui-fluid">
+			<br/>
+			<button pButton icon="pi pi-check"
+					label="Salvar"
+					[disabled]="frm.invalid || !Nome.value || !Telefone.value"
+					style="background-color: #494373">
+			</button>
+		</div>
+	</div>
+</form>

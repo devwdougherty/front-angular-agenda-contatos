@@ -1,0 +1,13 @@
+<app-navbar></app-navbar>
+
+<!-- Emit messages - PrimeNG component -->
+<p-growl></p-growl>
+
+<app-contatos-register (contatoSalvo)="list.list()"></app-contatos-register>
+
+<br/>
+<br/>
+
+<app-contatos-list #list></app-contatos-list>
+
+<router-outlet></router-outlet>
