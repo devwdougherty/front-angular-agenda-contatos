@@ -1,6 +1,19 @@
-# FrontAgendaContatos
+# Angular Agenda de Contatos
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8 and Angular 7.
+
+$ npm install
+$ ng serve
+
+External packages inside project: PrimeNG.
+
+If necessary, run:
+$ npm install primeng primeicons --save
+
+In the case of compilation problems, install the following dependency:
+$ npm install @angular/cdk --save *
+
+# CLI Instructions
 
 ## Development server
 
