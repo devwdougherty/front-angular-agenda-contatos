@@ -9,7 +9,7 @@ $ npm install
 $ ng serve
 ```
 
-External packages inside project: PrimeNG.
+**External packages inside project:** PrimeNG.
 
 If necessary, run:
 ```
