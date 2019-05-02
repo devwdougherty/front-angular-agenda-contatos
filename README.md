@@ -2,6 +2,8 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8 and Angular 7.
 
+A basic single page app that allows to add, read and delete some records from a [Web API](https://github.com/devwdougherty/w12-web-api-agenda-contatos).
+
 ```
 $ npm install
 $ ng serve
